@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spam Mail Sender</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            padding: 20px 0;
+        }
+        label, input, button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        input, button {
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+    </style>
+    <script>
+        function navigateToSpam() {
+            var id1 = document.getElementById('id1').value;
+            var id2 = document.getElementById('id2').value;
+            window.location.href = '/sendMail/' + btoa(id1) + '/' + btoa(id2) + '/index.html';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Spam Mail Sender</h1>
+        <br>
+        <p>Please use this responsibly. I am not in trouble for the consequences, you are. The emails may or may not work due to rate limitting.</p>
+        <label for="id1">Email:</label><br>
+        <input type="text" id="id1" name="id1"><br>
+        <label for="id2">Times:</label><br>
+        <input type="text" id="id2" name="id2"><br>
+        <button onclick="navigateToSpam()">Send Spam</button>
+    </div>
+</body>
+</html>
